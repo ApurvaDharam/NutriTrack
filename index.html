@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url(food.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+  <header>
+    <h1>NutriTrack</h1>
+    <h2>Your Daily Food Tracker.</h2>
+  </header>
+  <main>
+    <div class="container" id="auth-container">
+      
+      <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+      <form id="login-form" style="display: none;">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <form id="signup-form" style="display: none;">
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div class="container" id="app-container" style="display: none;">
+      <div class="meal-container">
+        <h2>Log Your Meals</h2>
+        <form id="meal-form">
+          <div class="form-group">
+            <label for="meal-name">Meal Name:</label>
+            <input type="text" id="meal-name" required>
+          </div>
+          <div class="form-group">
+            <label for="calories">Calories:</label>
+            <input type="number" id="calories" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+          </div>
+          <button type="submit">Add Meal</button>
+        </form>
+      </div>
+      <div class="meal-container">
+        <h2>Your Meals</h2>
+        <ul id="meal-list"></ul>
+      </div>
+      <div class="container">
+        <h2>Total Calories</h2>
+        <p id="total-calories"> 0</p>
+      </div>
+      <div class="meal-container">
+        <h2>Nutrition Tips</h2>
+        <form id="nutrition-form">
+          <input type="text" id="food-input" placeholder="Enter a food item" required>
+          <button type="submit">Get Nutrition Tips</button>
+        </form>
+        <ul id="nutrition-tips"></ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 NutriTrack App by Apurva Dharam. All rights reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script2.js"></script>
+  <script src="https://api.edamam.com/api/nutrition-data?app_id=a515427e &app_key=22d82e4353055cb28227107fcbc0df22"> </script>
+    
+</body>
+</html>
